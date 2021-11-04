@@ -1,1 +1,2 @@
 *.* encoding=windows-1251
+*.* text working-tree-encoding=windows-1251
