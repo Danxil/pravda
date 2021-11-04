@@ -15,23 +15,23 @@ document.addEventListener("DOMContentLoaded", function () {
     var type = null;
     if (url_p !== null) {
       type = "pravda";
-      // создан ие банера в указанном месте
+      // СЃРѕР·РґР°РЅ РёРµ Р±Р°РЅРµСЂР° РІ СѓРєР°Р·Р°РЅРЅРѕРј РјРµСЃС‚Рµ
     }
     if (url_l !== null) {
       type = "live";
-      // создан ие банера в указанном месте
+      // СЃРѕР·РґР°РЅ РёРµ Р±Р°РЅРµСЂР° РІ СѓРєР°Р·Р°РЅРЅРѕРј РјРµСЃС‚Рµ
     }
     if (url_e !== null) {
       type = "ekonom";
-      // создан ие банера в указанном месте
+      // СЃРѕР·РґР°РЅ РёРµ Р±Р°РЅРµСЂР° РІ СѓРєР°Р·Р°РЅРЅРѕРј РјРµСЃС‚Рµ
     }
     if (url_t !== null) {
       type = "tabloid";
-      // создан ие банера в указанном месте
+      // СЃРѕР·РґР°РЅ РёРµ Р±Р°РЅРµСЂР° РІ СѓРєР°Р·Р°РЅРЅРѕРј РјРµСЃС‚Рµ
     }
     if (url_ep !== null) {
       type = "epravda";
-      // создан ие банера в указанном месте
+      // СЃРѕР·РґР°РЅ РёРµ Р±Р°РЅРµСЂР° РІ СѓРєР°Р·Р°РЅРЅРѕРј РјРµСЃС‚Рµ
     }
 
     var userInf = localStorage.getItem("userInf");
@@ -79,17 +79,17 @@ function cabinet_event(user_inf, type) {
     MyFavoritesLinks = [];
   }
 
-  //модальное окно
+  //РјРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ
   var css =
     "<style>.modal{display:none;position:fixed;z-index:1;background-color:#000;background-color:rgba(0,0,0,.5);align-items:center;justify-content:center;z-index:9999;right:0;bottom:0;left:0;top:0;transition:all .8s linear}.modal-content{background-color:#fefefe;margin:auto;padding:20px;border:1px solid #888;max-width:320px;max-height:100vh;overflow-x:hidden;overflow-y:auto;transition:all .4s linear;flex:0 1 100%;font-family:'Fira Sans',sans-serif}.close{color:#aaa;float:right;font-size:28px;font-weight:700;display:block;height:20px;width:20px;margin:-4px -4px 0 0;cursor:pointer}.close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer}.icon .icon-bar{display:block;width:18px;height:2px;background-color:#2e2e2e;position:relative;top:10px;right:-2px}.icon>.icon-bar{-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg);margin-top:-2px}.icon>.icon-bar+.icon-bar{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}.button_link{width:100%;display:inline-block;vertical-align:middle;padding:14px;border:1px solid transparent;border-radius:0;font-size:16px;font-weight:700;text-transform:uppercase;line-height:1;text-align:center;cursor:pointer;background-color:#fff;color:#900022;box-shadow:0 3px 13px 0 rgba(17,17,17,.1);border-radius:30px;margin:10px 0 20px 0;font-family:'Fira Sans',sans-serif}.button_auth{width:100%;display:inline-block;vertical-align:middle;padding:14px;border:1px solid transparent;border-radius:0;font-size:16px;font-weight:700;text-transform:uppercase;line-height:1;text-align:center;cursor:pointer;background-color:#7e0019;color:#fff;box-shadow:0 3px 13px 0 rgba(17,17,17,.1);border-radius:30px;margin:0 0 20px 0;font-family:'Fira Sans',sans-serif}.button_auth:hover,.button_link:hover{opacity:.86}.modal-content p {margin: 1em 0;} #add_fo_favorite{cursor: pointer;}</style>";
 
   var html =
-    '<div id="myModal" class="modal"> <div class="modal-content"> <a class="close icon"> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <p><b>Функція збереження статей доступна лише для членів Клубу УП</b></p><a href="http://club.pravda.com.ua"><button class="button_link">Дізнатися більше про Клуб</button></a> <a href="https://cabinet.pravda.com.ua/check"><button class="button_auth">Авторизуватись</button></a> </div></div>';
+    '<div id="myModal" class="modal"> <div class="modal-content"> <a class="close icon"> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <p><b>Р¤СѓРЅРєС†С–СЏ Р·Р±РµСЂРµР¶РµРЅРЅСЏ СЃС‚Р°С‚РµР№ РґРѕСЃС‚СѓРїРЅР° Р»РёС€Рµ РґР»СЏ С‡Р»РµРЅС–РІ РљР»СѓР±Сѓ РЈРџ</b></p><a href="http://club.pravda.com.ua"><button class="button_link">Р”С–Р·РЅР°С‚РёСЃСЏ Р±С–Р»СЊС€Рµ РїСЂРѕ РљР»СѓР±</button></a> <a href="https://cabinet.pravda.com.ua/check"><button class="button_auth">РђРІС‚РѕСЂРёР·СѓРІР°С‚РёСЃСЊ</button></a> </div></div>';
 
   var now = new Date();
 
   /*
-  // отключение рекламы
+  // РѕС‚РєР»СЋС‡РµРЅРёРµ СЂРµРєР»Р°РјС‹
   if (user_inf != null && user_inf.ads == true) {
     var banners = document.getElementById("adriver_banner_1706769137");
     if (banners != null) {
@@ -152,14 +152,14 @@ function cabinet_event(user_inf, type) {
   }
   */
 
-  // Укр правда
+  // РЈРєСЂ РїСЂР°РІРґР°
   //-----------------------------------------------
   ukr_pravda = document.querySelector(".post_social_top");
   if (ukr_pravda !== null && type == "pravda") {
-    // добовляем кнопку добавить в избранное
+    // РґРѕР±РѕРІР»СЏРµРј РєРЅРѕРїРєСѓ РґРѕР±Р°РІРёС‚СЊ РІ РёР·Р±СЂР°РЅРЅРѕРµ
     ukr_pravda.insertAdjacentHTML(
       "beforeend",
-      '<a class="post_social_item" id="add_fo_favorite" ><img src="https://cabinet.pravda.com.ua/images/ico_d_bookmark.svg" alt="Додати у вибране"></a>'
+      '<a class="post_social_item" id="add_fo_favorite" ><img src="https://cabinet.pravda.com.ua/images/ico_d_bookmark.svg" alt="Р”РѕРґР°С‚Рё Сѓ РІРёР±СЂР°РЅРµ"></a>'
     );
 
     if (user_inf == null || user_inf.expire < now) {
@@ -185,7 +185,7 @@ function cabinet_event(user_inf, type) {
         document.querySelector("#add_fo_favorite img").src =
           "https://cabinet.pravda.com.ua/images/ico_bookmark.svg";
       } else {
-        // добавляени в избранное
+        // РґРѕР±Р°РІР»СЏРµРЅРё РІ РёР·Р±СЂР°РЅРЅРѕРµ
         document
           .getElementById("add_fo_favorite")
           .addEventListener("click", function () {
@@ -203,14 +203,14 @@ function cabinet_event(user_inf, type) {
   }
   //-----------------------------------------------
 
-  // Жизнь
+  // Р–РёР·РЅСЊ
   //-----------------------------------------------
   life = document.querySelector(".comment-bottom-block");
   if (life !== null && type == "live") {
-    // добовляем кнопку добавить в избранное
+    // РґРѕР±РѕРІР»СЏРµРј РєРЅРѕРїРєСѓ РґРѕР±Р°РІРёС‚СЊ РІ РёР·Р±СЂР°РЅРЅРѕРµ
     life.insertAdjacentHTML(
       "afterend",
-      '<div class="comment-bottom-block" id="add_fo_favorite" style="cursor:pointer;"><a><img src="https://cabinet.pravda.com.ua/images/ico_bookmark_life.svg" alt="В закладки"></a></div>'
+      '<div class="comment-bottom-block" id="add_fo_favorite" style="cursor:pointer;"><a><img src="https://cabinet.pravda.com.ua/images/ico_bookmark_life.svg" alt="Р’ Р·Р°РєР»Р°РґРєРё"></a></div>'
     );
 
     if (user_inf == null || user_inf.expire < now) {
@@ -236,7 +236,7 @@ function cabinet_event(user_inf, type) {
         document.querySelector("#add_fo_favorite img").src =
           "https://cabinet.pravda.com.ua/images/ico_bookmark_life_a.svg";
       } else {
-        // добавляени в избранное
+        // РґРѕР±Р°РІР»СЏРµРЅРё РІ РёР·Р±СЂР°РЅРЅРѕРµ
         document
           .getElementById("add_fo_favorite")
           .addEventListener("click", function () {
@@ -254,14 +254,14 @@ function cabinet_event(user_inf, type) {
   }
   //-----------------------------------------------
 
-  // Экономика
+  // Р­РєРѕРЅРѕРјРёРєР°
   //-----------------------------------------------
   ecomon = document.querySelector(".post__social tr");
   if (ecomon !== null && type == "ekonom") {
-    // добовляем кнопку добавить в избранное
+    // РґРѕР±РѕРІР»СЏРµРј РєРЅРѕРїРєСѓ РґРѕР±Р°РІРёС‚СЊ РІ РёР·Р±СЂР°РЅРЅРѕРµ
     ecomon.insertAdjacentHTML(
       "beforeend",
-      '<td style="padding: 0 0 0 15px;"><div id="add_fo_favorite" style="border-radius: 3px; background-color: rgb(74, 93, 50); height: 19px; padding: 1px 12px 2px 8px; display: inline-block;cursor:pointer;"><a><img src="https://cabinet.pravda.com.ua/images/ico_bookmark_e.svg" alt="В закладки"><span style="font-size: 10px; color: #fff; position: relative; top: -3px;">В закладки</span></a></div></td>'
+      '<td style="padding: 0 0 0 15px;"><div id="add_fo_favorite" style="border-radius: 3px; background-color: rgb(74, 93, 50); height: 19px; padding: 1px 12px 2px 8px; display: inline-block;cursor:pointer;"><a><img src="https://cabinet.pravda.com.ua/images/ico_bookmark_e.svg" alt="Р’ Р·Р°РєР»Р°РґРєРё"><span style="font-size: 10px; color: #fff; position: relative; top: -3px;">Р’ Р·Р°РєР»Р°РґРєРё</span></a></div></td>'
     );
 
     if (user_inf == null || user_inf.expire < now) {
@@ -287,7 +287,7 @@ function cabinet_event(user_inf, type) {
         document.querySelector("#add_fo_favorite img").src =
           "https://cabinet.pravda.com.ua/images/ico_bookmark_e_a.svg";
       } else {
-        // добавляени в избранное
+        // РґРѕР±Р°РІР»СЏРµРЅРё РІ РёР·Р±СЂР°РЅРЅРѕРµ
         document
           .getElementById("add_fo_favorite")
           .addEventListener("click", function () {
@@ -305,14 +305,14 @@ function cabinet_event(user_inf, type) {
   }
   //-----------------------------------------------
 
-  // Таблоид
+  // РўР°Р±Р»РѕРёРґ
   //-----------------------------------------------
   tabloid = document.querySelector(".post__social");
   if (tabloid !== null && type == "tabloid") {
-    // добовляем кнопку добавить в избранное
+    // РґРѕР±РѕРІР»СЏРµРј РєРЅРѕРїРєСѓ РґРѕР±Р°РІРёС‚СЊ РІ РёР·Р±СЂР°РЅРЅРѕРµ
     tabloid.insertAdjacentHTML(
       "beforeend",
-      '<a class="post__social__item" id="add_fo_favorite"><img src="https://cabinet.pravda.com.ua/images/ico_bookmark_t.svg" alt="Додати у вибране" width="40" height="40"></a>'
+      '<a class="post__social__item" id="add_fo_favorite"><img src="https://cabinet.pravda.com.ua/images/ico_bookmark_t.svg" alt="Р”РѕРґР°С‚Рё Сѓ РІРёР±СЂР°РЅРµ" width="40" height="40"></a>'
     );
 
     if (user_inf == null || user_inf.expire < now) {
@@ -338,7 +338,7 @@ function cabinet_event(user_inf, type) {
         document.querySelector("#add_fo_favorite img").src =
           "https://cabinet.pravda.com.ua/images/ico_bookmark_t_a.svg";
       } else {
-        // добавляени в избранное
+        // РґРѕР±Р°РІР»СЏРµРЅРё РІ РёР·Р±СЂР°РЅРЅРѕРµ
         document
           .getElementById("add_fo_favorite")
           .addEventListener("click", function () {
@@ -356,11 +356,11 @@ function cabinet_event(user_inf, type) {
   }
   //-----------------------------------------------
 
-  // Европейская правда
+  // Р•РІСЂРѕРїРµР№СЃРєР°СЏ РїСЂР°РІРґР°
   //-----------------------------------------------
   epravda = document.querySelector(".post__social_top");
   if (epravda !== null && type == "epravda") {
-    // добовляем кнопку добавить в избранное
+    // РґРѕР±РѕРІР»СЏРµРј РєРЅРѕРїРєСѓ РґРѕР±Р°РІРёС‚СЊ РІ РёР·Р±СЂР°РЅРЅРѕРµ
     epravda.insertAdjacentHTML(
       "beforeend",
       '<a class="post__social__item" id="add_fo_favorite" style="background: #e5edf4; padding: 0 10px 0 10px;cursor:pointer;"><img src="https://cabinet.pravda.com.ua/images/ico_bookmark_eu.svg" alt=""></a>'
@@ -389,7 +389,7 @@ function cabinet_event(user_inf, type) {
         document.querySelector("#add_fo_favorite img").src =
           "https://cabinet.pravda.com.ua/images/ico_bookmark_eu_a.svg";
       } else {
-        // добавляени в избранное
+        // РґРѕР±Р°РІР»СЏРµРЅРё РІ РёР·Р±СЂР°РЅРЅРѕРµ
         document
           .getElementById("add_fo_favorite")
           .addEventListener("click", function () {
